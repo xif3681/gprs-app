@@ -109,11 +109,19 @@ const AppNavigator = createStackNavigator(
   },
 );
 
-const TabNavigator = createBottomTabNavigator({
-  Home: HomeStack,
-  Read: ReadStack,
-  Usb: UsbStack,
-});
+const TabNavigator = createBottomTabNavigator(
+  {
+    Home: HomeStack,
+    Read: ReadStack,
+    Usb: UsbStack,
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: '#f4ea2a',
+      inactiveTintColor: '#1296db',
+    },
+  },
+);
 
 export default createAppContainer(TabNavigator);
 // export default createAppContainer(AppNavigator);

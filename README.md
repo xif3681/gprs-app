@@ -3,8 +3,8 @@ react-native
 
 ## ensure you have install the  package "yarn " and "react-native-cli"
 
-## yarn
+$ yarn
 
-## react-native run-andriod
+$ react-native run-andriod
 
 

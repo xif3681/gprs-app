@@ -16,11 +16,11 @@ export default class HomeScreen extends Component {
     // this.props.navigation.navigate('NotFind')
 
     // get a list of files and directories in the main bundle
-    // Alert(RNFS.MainBundlePath)
+    //Alert.alert(RNFS.MainBundlePath)
     // Alert.alert(RNFS.CachesDirectoryPath);
     // Alert.alert(RNFS.DocumentDirectoryPath);
-    // Alert(RNFS.TemporaryDirectoryPath)
-    // Alert( RNFS.LibraryDirectoryPath)
+    //Alert.alert(RNFS.TemporaryDirectoryPath)
+    //Alert.alert( RNFS.LibraryDirectoryPath)
     // Alert.alert(RNFS.ExternalDirectoryPath);
     // Alert.alert(RNFS.ExternalStorageDirectoryPath);
     // RNFS.readDir(RNFS.DocumentDirectoryPath)

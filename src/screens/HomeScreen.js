@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, TouchableOpacity, View, Alert} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Colors from '../constants/Colors';
 
 export default class HomeScreen extends Component {
@@ -10,8 +10,8 @@ export default class HomeScreen extends Component {
     // this.props.navigation.navigate('NotFind')
   };
 
-  _onLongPressButton() {
-    Alert.alert('You long-pressed the button!');
+  onPressLearnMore() {
+    this.props.navigation.navigate('Read');
   }
   render() {
     return (
@@ -19,7 +19,7 @@ export default class HomeScreen extends Component {
         <View style={styles.container} contentContainerStyle={{paddingTop: 30}}>
           <View
             style={{
-              flex: 2,
+              flex: 1,
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: Colors.lighter,

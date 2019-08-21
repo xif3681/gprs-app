@@ -36,21 +36,22 @@ class ScanScreen extends Component {
     const {navigate} = this.props.navigation;
     const student = this.state.gprs.student;
     const {data} = result;
-    // let hascode = false;
-    student.some(item => {
+    let hascode = false;
+    let studentItem;
+    hascode = student.some(item => {
       if (data === item.number) {
-        navigate('Details', {data: data, student: item});
+        studentItem = item;
+        // hascode = true;
         return true;
       } else {
-        navigate('NotFind', {data: data});
         return false;
       }
     });
-    // if (hascode) {
-    //   navigate('Details', { data: data, student: item })
-    // } else {
-    //   navigate('NotFind', { data: data })
-    // }
+    if (hascode) {
+      navigate('Details', {data: data, student: studentItem});
+    } else {
+      navigate('NotFind', {data: data});
+    }
   };
 
   render() {

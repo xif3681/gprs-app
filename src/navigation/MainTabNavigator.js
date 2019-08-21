@@ -22,6 +22,7 @@ const HomeStack = createStackNavigator(
     Home: {screen: HomeScreen},
     Scan: {screen: ScanScreen},
     NotFind: {screen: NotFindScreen},
+    Details: {screen: DetailsScreen},
   },
   config,
 );
@@ -41,19 +42,18 @@ HomeStack.navigationOptions = {
   },
 };
 // details
-const DetailsStack = createStackNavigator(
-  {
-    Details: {screen: DetailsScreen},
-    Scan: {screen: ScanScreen},
-    NotFind: {screen: NotFindScreen},
-  },
-  config,
-);
+// const DetailsStack = createStackNavigator(
+//   {
+//     Details: {screen: DetailsScreen},
+//     Scan: {screen: ScanScreen},
+//     NotFind: {screen: NotFindScreen},
+//   },
+//   config,
+// );
 // read
 const ReadStack = createStackNavigator(
   {
     Read: {screen: ReadScreen},
-    NotFind: {screen: NotFindScreen},
   },
   config,
 );
@@ -75,8 +75,8 @@ ReadStack.navigationOptions = {
 // usb
 const UsbStack = createStackNavigator(
   {
-    Read: {screen: UsbScreen},
-    NotFind: {screen: NotFindScreen},
+    Usb: {screen: UsbScreen},
+    // NotFind: {screen: NotFindScreen},
   },
   config,
 );
@@ -96,18 +96,18 @@ UsbStack.navigationOptions = {
   },
 };
 
-const AppNavigator = createStackNavigator(
-  {
-    HomeStack,
-    DetailsStack,
-    ReadStack,
-    UsbStack,
-  },
-  {
-    mode: 'modal',
-    headerMode: 'none',
-  },
-);
+// const AppNavigator = createStackNavigator(
+//   {
+//     HomeStack,
+//     DetailsStack,
+//     ReadStack,
+//     UsbStack,
+//   },
+//   {
+//     mode: 'modal',
+//     headerMode: 'none',
+//   },
+// );
 
 const TabNavigator = createBottomTabNavigator(
   {

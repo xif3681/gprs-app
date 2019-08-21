@@ -12,14 +12,17 @@ export default class NotFindScreen extends Component {
     };
   };
   onPressLearnMore = () => {
-    // this.props.navigation.navigate('Home');
-    this.props.navigation.navigate('Read');
+    this.props.navigation.navigate('Home');
+    // this.props.navigation.navigate('Read');
   };
   render() {
+    const {navigation} = this.props;
+    const data = navigation.getParam('data', '');
     return (
       <View style={{flex: 1, backgroundColor: Colors.default}}>
         <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
           <Text style={{color: Colors.white}}>查询失败!</Text>
+          <Text style={{color: Colors.white}}>数据表中没有{data}!</Text>
         </View>
         <View style={{flex: 1, justifyContent: 'flex-end'}}>
           <Button

@@ -80,7 +80,7 @@ export default class DetailsScreen extends Component {
         key: 'number',
         avatar: require('../assets/images/gprs.png'),
       },
-    ];;
+    ];
     return (
       <View style={{flex: 1}}>
         <View style={styles.container}>
@@ -101,4 +101,4 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 44,
   },
-});;
+});

@@ -191,7 +191,11 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    // implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    // compile(name:'libUsbCamera-debug.aar', ext:'aar')//加上这句
+    // compile files('libs/libUsbCamera-debug.aar') // 
+    //compile files('libs/alipaySdk-20180601.jar') //集成支付宝sdk添加这一行`` 
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

@@ -1,33 +1,17 @@
 import React, {Component} from 'react';
 import {Image, StyleSheet, TouchableOpacity, View, Alert} from 'react-native';
 import Colors from '../constants/Colors';
-// import {UsbSerial} from 'react-native-usbserial';
-// const usbs = new UsbSerial();
+
+import ToastExample from '../packages/ToastExample';
 
 export default class UsbScreen extends Component {
   _onPressButton = () => {
     // this.props.navigation.navigate('Read');
-    this.props.navigation.navigate('Details');
+    // this.props.navigation.navigate('Details');
     // this.props.navigation.navigate('Scan');
     // this.props.navigation.navigate('NotFind')
+    ToastExample.show('pig it works', ToastExample.SHORT);
   };
-
-  // async getDeviceAsync() {
-  //   try {
-  //     const deviceList = await usbs.getDeviceListAsync();
-  //     const firstDevice = deviceList[0];
-
-  //     Alert.alert(firstDevice);
-
-  //     if (firstDevice) {
-  //       const usbSerialDevice = await usbs.openDeviceAsync(firstDevice);
-
-  //       Alert.alert(usbSerialDevice);
-  //     }
-  //   } catch (err) {
-  //     Alert.alert(err);
-  //   }
-  // }
 
   render() {
     return (
